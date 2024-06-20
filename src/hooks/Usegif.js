@@ -5,7 +5,7 @@ import { useState } from 'react';
 
 const Usegif = (tag) => {
 const [gif,setgif] = useState('');
-const API_KEY = 'unK87tAhX2xKFP3FwB24EoMKJCf9CVZd'; 
+const API_KEY = 'VJoNB2NYjzpkdTVSN97f399uquTDBkaq'; 
 
 
 const [loading,setLoading] = useState ('false');
