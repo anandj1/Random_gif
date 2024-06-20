@@ -8,7 +8,7 @@ const Tag = () => {
     // const [gif,setgif] = useState('');
     // const API_KEY = 'unK87tAhX2xKFP3FwB24EoMKJCf9CVZd'; 
 
-    const [tag,setTag] = useState('car');
+    const [tag,setTag] = useState('smile');
     // const [loading,setLoading] = useState ('false');
     // async function fetchData(){
     // setLoading(true);
