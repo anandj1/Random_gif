@@ -1,6 +1,7 @@
 import React  from 'react'
 import Usegif from '../hooks/Usegif';
 import Spinner from './Spinner';
+import {CopyToClipboard} from 'react-copy-to-clipboard';
 
 
 
@@ -27,19 +28,29 @@ const Random = () => {
     //Calling hook
 
     const {gif,loading,fetchData}= Usegif();
+
+
     function Clickhandler(){
       fetchData();
            
 
     }
+
+
   return (
     <div className=' w-1/2  flex flex-col  gap-7 items-center bg-red-500  border border-black mt-10 rounded-md'>
         <h1 className='text-3xl underline uppercase text-blue-900 font-bold'>Random Gif</h1>
         {
           loading ? (<Spinner/>): (<img src={gif} width="410" alt=''/>)
         }
+
         
         <button className=' bg-blue-500 mb-8 w-11/12 rounded-md py-2 text-lg ' onClick={Clickhandler}>Generate!</button>
+        <CopyToClipboard text={gif}
+          onCopy={() => alert("Copied")}>
+           <button className='bg-blue-500  mb-8 w-[80px] rounded-md py-2 text-lg' >Copy</button>
+        </CopyToClipboard>
+       
     </div>
   )
 }
